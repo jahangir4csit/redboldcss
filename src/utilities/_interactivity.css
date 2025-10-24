@@ -1,0 +1,15 @@
+/* |==================================================================================
+| INTERACTIVITY UTILITIES
+| Includes utilities for cursor control and pointer events.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. CURSOR UTILITIES
+------------------------------------ */
+.cursor-pointer { cursor: pointer; }
+
+/* ------------------------------------
+| B. POINTER EVENTS
+------------------------------------ */
+.pointer-events-none { pointer-events: none; }

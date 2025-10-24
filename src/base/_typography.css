@@ -1,0 +1,29 @@
+/* |==================================================================================
+| BASE TYPOGRAPHY STYLES
+| Applies base styles to semantic heading elements.
+| NOTE: All utility classes are in src/utilities/_text.css
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. PARAGRAPHS AND BLOCK ELEMENTS
+------------------------------------ */
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre {
+    margin-bottom: var(--space-4);
+}
+
+
+/* ------------------------------------
+| H. BLOCKQUOTE STYLES
+------------------------------------ */
+blockquote {
+    border-left: 4px solid var(--color-border);
+    padding-left: var(--space-4);
+    font-style: italic;
+    color: var(--color-text-dark);
+}

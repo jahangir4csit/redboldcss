@@ -1,0 +1,96 @@
+/* |==================================================================================
+| STRUCTURAL RESET AND BASE DEFAULTS
+| Applies box-sizing, clears margins/padding, and sets body/heading base styles.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. UNIVERSAL BOX-SIZING RESET
+------------------------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------
+| B. BASE HTML & BODY STYLES
+------------------------------------ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: var(--line-height-base);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ------------------------------------
+| C. MEDIA DEFAULTS
+| Makes images and media responsive by default
+------------------------------------ */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------
+| D. HEADING DEFAULTS (h1-h6)
+------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    line-height: var(--line-height-heading);
+    margin: 0 0 0.5em;
+}
+
+/* ------------------------------------
+| E. LINK DEFAULTS (<a>)
+------------------------------------ */
+a {
+    color: var(--color-link-default);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+a:hover{
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* ------------------------------------
+| F. FORM CONTROL INHERITANCE (New Addition)
+| Standardizes input styles to inherit font properties from the body
+------------------------------------ */
+button,
+input,
+optgroup,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: var(--text-base);
+    line-height: var(--line-height-base);
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------
+| G. BASE LIST STYLES
+------------------------------------ */
+ul, ol {
+    list-style: none;
+    padding-left: var(--space-3);
+}
+

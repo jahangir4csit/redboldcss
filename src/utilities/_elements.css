@@ -1,0 +1,97 @@
+/* |==================================================================================
+| ELEMENT UTILITIES
+| Includes image/media, list styles, positioning, z-index, and embed wrappers.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. IMAGE & MEDIA UTILITIES
+------------------------------------ */
+.img-fluid {
+    /* Ensures images scale down within fluid containers */
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------
+| B. OBJECT FIT UTILITIES
+------------------------------------ */
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.object-fill { object-fit: fill; }
+.object-scale-down { object-fit: scale-down; }
+
+/* ------------------------------------
+| C. LIST STYLE UTILITIES
+------------------------------------ */
+.list-none { list-style-type: none; }
+.list-disc { list-style-type: disc; }
+.list-decimal { list-style-type: decimal; }
+
+/* ------------------------------------
+| D. POSITION UTILITIES
+------------------------------------ */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; top: 0; }
+
+/* ------------------------------------
+| E. Z-INDEX UTILITIES
+------------------------------------ */
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+.z-auto { z-index: auto; }
+
+/* ------------------------------------
+| F. BORDER UTILITIES (Width & Style)
+| Border color utilities live in _colors.css
+------------------------------------ */
+.border-none { border-width: 0; }
+.border { border: 1px solid var(--color-border); }
+
+/* ------------------------------------
+| G. EMBED/ASPECT RATIO UTILITIES
+| Creates responsive wrappers for iframes and videos.
+------------------------------------ */
+
+/* Base responsive class for embeds */
+.embed-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container for enforcing 16:9 aspect ratio */
+.embed-container-16x9 {
+    position: relative;
+    padding-bottom: 56.25%; /* 9 / 16 * 100 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: var(--space-4);
+}
+
+/* Container for enforcing 4:3 aspect ratio */
+.embed-container-4x3 {
+    position: relative;
+    padding-bottom: 75%; /* 3 / 4 * 100 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: var(--space-4);
+}
+
+/* Content inside the container (iframe, video, etc.) */
+.embed-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

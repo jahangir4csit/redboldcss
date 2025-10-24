@@ -1,0 +1,42 @@
+/* |==================================================================================
+| TABLE UTILITIES
+| Includes base element styling for readability and layout utility classes.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. BASE TABLE DEFAULTS (table, th, td)
+------------------------------------ */
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* keep for clean borders */
+    margin-bottom: var(--space-6);
+}
+
+th, td {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border: 1px solid var(--color-border);
+}
+
+th {
+    background-color: #f3f4f6;
+    font-weight: var(--font-weight-heading);
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    font-size: var(--text-sm);
+}
+
+/* ------------------------------------
+| B. ZEBRA STRIPING
+------------------------------------ */
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* ------------------------------------
+| C. TABLE LAYOUT UTILITIES
+------------------------------------ */
+.table-auto { table-layout: auto; }
+.table-fixed { table-layout: fixed; }

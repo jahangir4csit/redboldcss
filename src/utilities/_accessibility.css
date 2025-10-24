@@ -1,0 +1,56 @@
+/* |==================================================================================
+| ACCESSIBILITY UTILITIES
+| Includes focus ring styles and screen reader helpers.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. FOCUS RING DEFAULTS
+| Applies a standard focus style to interactive elements using the primary dark color.
+------------------------------------ */
+a:focus, button:focus, input:focus, select:focus, textarea:focus, button:focus
+{
+    outline: none;
+}
+a:focus, button:focus, input:focus, select:focus, textarea:focus, button:focus,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+input:checked,
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+
+/* ------------------------------------
+| B. FOCUS RING REMOVAL
+| Removes the default focus ring only on non-interactive elements that may inherit it
+| (This is a safeguard, but interactive elements above override it).
+------------------------------------ */
+:focus:not(a):not(button):not(input):not(select):not(textarea) {
+    outline: none;
+}
+
+/* ------------------------------------
+| C. SCREEN READER UTILITIES (sr-only)
+| Visually hides an element while still making it available to screen readers.
+------------------------------------ */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

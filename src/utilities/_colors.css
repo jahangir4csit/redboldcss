@@ -1,0 +1,39 @@
+/* |==================================================================================
+| COLOR UTILITIES
+| Includes classes for background colors and border colors.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. BACKGROUND COLOR UTILITIES (bg-*)
+| Applies background colors from the defined variables, setting light text on dark colors.
+------------------------------------ */
+.bg-primary { background-color: var(--color-primary); color: var(--color-text-light); }
+.bg-primary-light { background-color: var(--color-primary-light); }
+.bg-primary-dark { background-color: var(--color-primary-dark); color: var(--color-text-light); }
+
+.bg-secondary { background-color: var(--color-secondary); color: var(--color-text-light); }
+.bg-secondary-light { background-color: var(--color-secondary-light); }
+.bg-secondary-dark { background-color: var(--color-secondary-dark); color: var(--color-text-light); }
+
+.bg-success { background-color: var(--color-success); color: var(--color-text-light); }
+.bg-error { background-color: var(--color-error); color: var(--color-text-light); }
+
+/* ------------------------------------
+| B. BORDER COLOR UTILITIES (border-*)
+| Applies border colors from the defined variables.
+------------------------------------ */
+.border-primary { border-color: var(--color-primary); }
+.border-secondary { border-color: var(--color-secondary); }
+.border-success { border-color: var(--color-success); }
+.border-error { border-color: var(--color-error); }
+
+.border-dark { border-color: var(--color-text-dark); }
+.border-light { border-color: var(--color-text-light); }
+
+/* ------------------------------------
+| C. TEXT COLOR (FOR DARK BACKGROUNDS)
+| Ensures text is readable on certain background utilities.
+| NOTE: Primary text color utilities live in _text.css.
+------------------------------------ */
+.text-on-dark { color: var(--color-text-light); }

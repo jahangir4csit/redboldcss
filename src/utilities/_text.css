@@ -1,0 +1,91 @@
+/* |==================================================================================
+| TEXT UTILITIES
+| Includes classes for font weight, size, color, alignment, styling, and overflow.
+| NOTE: Base typography styles live in src/base/_typography.css
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. FONT WEIGHT (200-900 Scale)
+------------------------------------ */
+.font-thin { font-weight: 200; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+
+/* ------------------------------------
+| B. FONT SIZE (text-xs to text-3xl)
+------------------------------------ */
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+
+/* ------------------------------------
+| C. TEXT ALIGNMENT
+------------------------------------ */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ------------------------------------
+| D. TEXT COLOR
+------------------------------------ */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-dark { color: var(--color-text-dark); }
+.text-light { color: var(--color-text-light); }
+.text-success { color: var(--color-success); }
+.text-error { color: var(--color-error); }
+.text-warning { color: var(--color-warning); }
+
+/* ------------------------------------
+| E. TEXT STYLE & DECORATION
+------------------------------------ */
+.no-underline { text-decoration: none; }
+.underline { text-decoration: underline; }
+
+/* ------------------------------------
+| F. TEXT TRANSFORMATION
+------------------------------------ */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+/* ------------------------------------
+| G. LINE HEIGHT (Leading)
+------------------------------------ */
+.leading-none { line-height: var(--line-height-none); }
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-base); }
+.leading-loose { line-height: var(--line-height-loose); }
+
+/* ------------------------------------
+| H. TEXT OVERFLOW / TRUNCATION
+------------------------------------ */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}

@@ -1,0 +1,101 @@
+/* |==================================================================================
+| FORM UTILITIES
+| Includes base styling and utilities for inputs, textareas, selects, and controls.
+|==================================================================================
+*/
+
+/* ------------------------------------
+| A. INPUT, TEXTAREA, AND SELECT BASE
+------------------------------------ */
+
+.form-input,
+.form-textarea,
+.form-select {
+    padding: var(--space-2);
+    font-size: var(--text-base);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Text area specific styles */
+.form-textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+/* ------------------------------------
+| B. LABEL & GROUPING
+------------------------------------ */
+.form-label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-heading);
+    color: var(--color-text-dark);
+    margin-bottom: var(--space-1);
+}
+
+/* Utility for wrapping a control (like a checkbox or radio) */
+.form-control-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+/* ------------------------------------
+| C. DISABLED & READ-ONLY STATES
+------------------------------------ */
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled,
+.form-disabled,
+.form-input:read-only,
+.form-textarea:read-only {
+    background-color: #f3f4f6;
+}
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled,
+.form-disabled {
+    border-color: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* ------------------------------------
+| D. ERROR STATE
+------------------------------------ */
+.form-error {
+    border-color: var(--color-error) !important;
+}
+
+/* ------------------------------------
+| F. CHECKBOX AND RADIO STYLING
+------------------------------------ */
+.form-checkbox,
+.form-radio {
+    /* Reset default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: var(--space-4); /* 1rem */
+    height: var(--space-4); /* 1rem */
+    margin: 0;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-light);
+    cursor: pointer;
+    vertical-align: top;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.form-checkbox {
+    border-radius: var(--rounded-sm);
+}
+
+.form-radio {
+    border-radius: var(--rounded-full);
+}
